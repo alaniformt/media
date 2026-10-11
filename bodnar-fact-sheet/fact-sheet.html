@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Your Vote Buys</title>
+<meta name="description" content="A fact sheet for Montanans who want a real check on Trump: what a vote for Seth Bodnar can and can't deliver in the U.S. Senate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #14213d;
+    --ink-soft: #3b4660;
+    --paper: #fbf8f2;
+    --card: #ffffff;
+    --rule: #d9d2c3;
+    --accent: #b8452f;
+    --sky: #2f5d8a;
+    --yes: #2e7d4f;
+    --no: #b3261e;
+    --maybe: #b7791f;
+    --band: #14213d;
+    --band-ink: #fbf8f2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #eef1f7; --ink-soft: #b9c1d3; --paper: #0f1626; --card: #182238;
+      --rule: #2e3a55; --accent: #e07a5f; --sky: #8bb4dd; --yes: #5cc28a;
+      --no: #f07167; --maybe: #f2b84b; --band: #1d2a45; --band-ink: #eef1f7;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #eef1f7; --ink-soft: #b9c1d3; --paper: #0f1626; --card: #182238;
+    --rule: #2e3a55; --accent: #e07a5f; --sky: #8bb4dd; --yes: #5cc28a;
+    --no: #f07167; --maybe: #f2b84b; --band: #1d2a45; --band-ink: #eef1f7;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font: 15px/1.5 "Source Serif 4", Georgia, serif;
+  }
+  h1, h2, h3, .kicker, th, .mark, .label, .num { font-family: "Archivo", "Helvetica Neue", Arial, sans-serif; }
+  .page {
+    max-width: 8.5in;
+    margin: 0 auto;
+    padding: 0.5in 0.55in;
+  }
+  .kicker {
+    font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 8px;
+  }
+  h1 { font-size: 38px; line-height: 1.05; font-weight: 900; margin: 0 0 8px; letter-spacing: -.01em; }
+  .sub { font-size: 20px; font-family: "Archivo", sans-serif; font-weight: 600; color: var(--sky); margin: 0 0 14px; }
+  .lede { font-size: 15.5px; margin: 0 0 16px; }
+  .lede strong { color: var(--accent); }
+  .pledge {
+    background: var(--band); color: var(--band-ink);
+    border-radius: 10px; padding: 14px 18px; margin: 0 0 18px;
+    display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: center;
+  }
+  .pledge .label { font-weight: 900; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--maybe); }
+  .pledge p { margin: 0; font-size: 14.5px; }
+  h2 { font-size: 19px; font-weight: 800; margin: 0 0 8px; }
+  table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
+  th { text-align: left; font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); padding: 9px 12px; border-bottom: 2px solid var(--ink); }
+  th.c { text-align: center; }
+  td { padding: 9px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; font-size: 13.5px; }
+  tr:last-child td { border-bottom: 0; }
+  td.want { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 14px; width: 30%; }
+  td.mark { text-align: center; width: 13%; font-size: 13px; font-weight: 800; white-space: nowrap; }
+  .mark .sym { display: block; font-size: 22px; line-height: 1.1; }
+  .no { color: var(--no); } .yes { color: var(--yes); } .maybe { color: var(--maybe); }
+  .legend { font-size: 12px; color: var(--ink-soft); margin: 6px 0 0; }
+  sup { font-size: 9px; color: var(--sky); font-family: "Archivo", sans-serif; font-weight: 700; }
+
+  /* page 2 */
+  .break { page-break-before: always; break-before: page; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0 0 18px; }
+  .card { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 16px; }
+  .card h3 { font-size: 14px; margin: 0 0 6px; text-transform: uppercase; letter-spacing: .08em; }
+  .card ul { margin: 0; padding-left: 18px; font-size: 13.5px; }
+  .card li { margin: 0 0 4px; }
+  .funnel { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 0 0 6px; align-items: stretch; }
+  .step { padding: 14px 12px; color: #fff; text-align: center; }
+  .step .num { display: block; font-size: 30px; font-weight: 900; line-height: 1; }
+  .step .what { font-size: 12.5px; font-family: "Archivo", sans-serif; font-weight: 600; }
+  .s1 { background: #2f5d8a; border-radius: 10px 0 0 10px; }
+  .s2 { background: #24486d; }
+  .s3 { background: #b8452f; border-radius: 0 10px 10px 0; }
+  .note { font-size: 13px; color: var(--ink-soft); margin: 0 0 18px; }
+  .wins { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0 0 6px; }
+  .win { background: var(--card); border-left: 4px solid var(--sky); border-radius: 6px; padding: 10px 12px; font-size: 13px; }
+  .win b { font-family: "Archivo", sans-serif; display: block; font-size: 13.5px; }
+  .win .seat { color: var(--accent); font-family: "Archivo", sans-serif; font-weight: 700; font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em; }
+  .history { border: 2px solid var(--ink); border-radius: 10px; padding: 12px 16px; margin: 0 0 16px; font-size: 13.5px; }
+  .history p { margin: 0 0 6px; }
+  .swing { background: var(--card); border: 1px dashed var(--rule); border-radius: 10px; padding: 12px 16px; font-size: 13.5px; margin: 0 0 16px; }
+  .swing p { margin: 0; }
+  .bottom { background: var(--band); color: var(--band-ink); border-radius: 10px; padding: 16px 18px; }
+  .bottom h2 { color: var(--band-ink); font-size: 20px; }
+  .bottom p { margin: 0 0 8px; font-size: 14.5px; }
+  .bottom .ask { font-family: "Archivo", sans-serif; font-weight: 800; font-size: 16px; color: var(--maybe); margin: 0; }
+
+  .sources { font-size: 12px; line-height: 1.45; color: var(--ink-soft); margin-top: 8px; }
+  .sources ol { margin: 0; padding-left: 16px; }
+  .sources li { break-inside: avoid; margin-bottom: 3px; }
+  .sources a { color: var(--sky); word-break: break-word; }
+  .srcnote { font-size: 11px; color: var(--ink-soft); margin: 10px 0 0; }
+  .notes { font-size: 12.5px; padding-left: 18px; margin: 0; }
+  .notes li { margin-bottom: 5px; }
+  .disclaimer { margin-top: 10px; border: 1px solid var(--ink); padding: 5px 10px; font-family: "Archivo", sans-serif; font-weight: 700; font-size: 11px; display: inline-block; }
+
+  @media (max-width: 640px) {
+    .page { padding: 20px 16px; }
+    h1 { font-size: 30px; }
+    .grid2, .wins { grid-template-columns: 1fr; }
+    .funnel { grid-template-columns: 1fr; }
+    .s1, .s2, .s3 { border-radius: 0; }
+    .s1 { border-radius: 10px 10px 0 0; } .s3 { border-radius: 0 0 10px 10px; }
+    .pledge { grid-template-columns: 1fr; gap: 6px; }
+    td.want { width: auto; }
+    .sources { columns: 1; }
+  }
+  @page { size: letter; margin: 0; }
+  @media print {
+    :root { --ink:#14213d; --ink-soft:#3b4660; --paper:#fbf8f2; --card:#fff; --rule:#d9d2c3; --accent:#b8452f; --sky:#2f5d8a; --yes:#2e7d4f; --no:#b3261e; --maybe:#b7791f; --band:#14213d; --band-ink:#fbf8f2; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { padding: 0.4in 0.5in; zoom: .86; }
+    .page.p2 { zoom: .73; padding: 0.42in 0.56in; }
+    .bottom .ask { color: #f2b84b; }
+    .pledge .label { color: #f2b84b; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== PAGE 1 ===================== -->
+<section class="page">
+  <p class="kicker">A fact sheet for Montanans who want a real check on Trump</p>
+  <h1>So you don't want a Trump Republican as your senator.</h1>
+  <p class="sub">Here's what a vote for Seth Bodnar can — and can't — deliver.</p>
+
+  <p class="lede">Seth Bodnar says plenty that anti-Trump Montanans want to hear. He calls the tariffs "nonsensical."<sup>3</sup> He has condemned a "masked, untrained, unaccountable paramilitary force" in our cities.<sup>4</sup> But in the U.S. Senate, <strong>criticism is not a check on power.</strong> Power comes from a majority, a committee seat, and a gavel. Bodnar has pledged away the one thing that gets you all three.</p>
+
+  <div class="pledge">
+    <span class="label">The pledge</span>
+    <p>Bodnar has pledged <b>not to caucus with either party</b>.<sup>1</sup> His biggest outside backer, the Manchin-founded Independent Leadership Council's PAC, has reported about <b>$1.8 million</b> supporting him. It only backs candidates who make that pledge.<sup>2</sup></p>
+  </div>
+
+  <h2>What you're counting on vs. what a no-caucus senator can deliver</h2>
+  <table>
+    <thead>
+      <tr><th>What anti-Trump voters want</th><th class="c">Bodnar</th><th>Why</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="want">Take the Senate majority away from Trump's party</td>
+        <td class="mark no"><span class="sym">❌</span>No</td>
+        <td>A senator who won't join the Democratic caucus doesn't count toward a Democratic majority. In 2001, a single senator, Jim Jeffords, flipped control of the entire Senate. He could only do it because he joined a caucus.<sup>5</sup></td>
+      </tr>
+      <tr>
+        <td class="want">Replace Trump-aligned leadership and control what gets a vote</td>
+        <td class="mark no"><span class="sym">❌</span>No</td>
+        <td>The majority leader is chosen by the majority party's caucus, and the majority leader decides what reaches the floor. Outside every caucus, Bodnar gets no vote on who leads.</td>
+      </tr>
+      <tr>
+        <td class="want">Investigate and subpoena the administration</td>
+        <td class="mark no"><span class="sym">❌</span>No</td>
+        <td>Investigations and subpoenas are run by committee chairs. Chairs come from the majority caucus.</td>
+      </tr>
+      <tr>
+        <td class="want">Use the power of the purse to stop unlawful actions</td>
+        <td class="mark no"><span class="sym">❌</span>No</td>
+        <td>Funding limits and "no money for X" provisions are written in the Appropriations Committee. Seats on it are handed out through the party caucuses.</td>
+      </tr>
+      <tr>
+        <td class="want">Rein in ICE abuses</td>
+        <td class="mark maybe"><span class="sym">⚠️</span>Words only</td>
+        <td>He says he'd "legislate accountability."<sup>4</sup> But legislation is written in committee, and he'd have no committee seat to write it from.</td>
+      </tr>
+      <tr>
+        <td class="want">Convict Trump if the House impeaches</td>
+        <td class="mark maybe"><span class="sym">⚠️</span>Not committed</td>
+        <td>The House impeaches, then the Senate holds the trial; conviction takes 67 votes.<sup>12</sup> We found no public commitment from Bodnar to vote to convict.</td>
+      </tr>
+      <tr>
+        <td class="want">Vote "no" on bad bills and nominees</td>
+        <td class="mark yes"><span class="sym">✅</span>Yes</td>
+        <td>Every senator gets a vote. This is the part he <i>can</i> do. But it comes at the very end of the process, and only on what the majority chooses to bring up.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="legend">❌ = structurally out of reach without a caucus · ⚠️ = said but no commitment or no means to deliver · ✅ = within reach. Numbers refer to sources on page 3.</p>
+</section>
+
+<!-- ===================== PAGE 2 ===================== -->
+<section class="page break p2">
+  <h2>Where bills actually live or die</h2>
+  <div class="funnel">
+    <div class="step s1"><span class="num">~16,500</span><span class="what">bills introduced in the last full Congress (2023–24)</span></div>
+    <div class="step s2"><span class="num">Most</span><span class="what">never get a committee vote</span></div>
+    <div class="step s3"><span class="num">~1–2%</span><span class="what">became law (about 274)<sup style="color:#fff">6</sup></span></div>
+  </div>
+  <p class="note">Committees decide which bills move, write the actual language, and attach the money. A senator with no committee seat only sees the final step: a yes-or-no vote on whatever survived.</p>
+
+  <div class="grid2">
+    <div class="card">
+      <h3 class="yes">What a no-caucus senator can do</h3>
+      <ul>
+        <li>Vote yes/no on what reaches the floor</li>
+        <li>Give speeches and press conferences</li>
+        <li>Place "holds" and object to fast-tracking</li>
+        <li>Force votes on a few special resolutions (e.g., war powers)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 class="no">What a no-caucus senator gives up</h3>
+      <ul>
+        <li>Committee seats, where bill language is written</li>
+        <li>A say in who leads and what reaches the floor</li>
+        <li>A role in deciding which party controls the Senate</li>
+        <li>Party-run "hotlines" that clear most bipartisan bills</li>
+        <li>Leverage: a vote promised never to be traded can't be traded for Montana</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Montana's wins came from seats at the table <span style="font-weight:500;font-size:13px;color:var(--ink-soft)">(whatever you think of the senator)</span></h2>
+  <div class="wins">
+    <div class="win"><span class="seat">Chair, Senate Veterans' Affairs</span><b>Tester: PACT Act (2022)</b>The biggest expansion of care for toxic-exposed veterans in decades. It passed the Senate 86–11.<sup>7</sup></div>
+    <div class="win"><span class="seat">Chair, Defense Appropriations Subcommittee</span><b>Tester: Malmstrom and the Montana Guard</b>A gavel over nearly all defense spending meant real clout for Great Falls.<sup>8</sup></div>
+    <div class="win"><span class="seat">Member, House Appropriations</span><b>Zinke: about $35M for western Montana (FY2026)</b>Including $10M for the Noxon Bridge and $10M for Seeley Lake's wastewater plant.<sup>9</sup></div>
+    <div class="win"><span class="seat">Bipartisan partner and party UC process</span><b>Sheehy: aerial firefighting law (2025)</b>He teamed up with a Democrat and cleared the Senate by unanimous consent.<sup>10</sup></div>
+  </div>
+
+  <div class="history">
+    <h2 style="margin-bottom:4px">The last time a senator tried this</h2>
+    <p>In 1953, Oregon's Wayne Morse left the Republican Party and refused to join either side. He was <b>stripped of his seats on Armed Services and Labor</b> and left with the D.C. and Public Works committees. When he forced a floor vote to get his seats back, <b>7 senators</b> backed him. He got his choice of committees back only in 1955, <b>after he joined the Democrats.</b><sup>11</sup></p>
+    <p style="margin:0">Bodnar says he can "negotiate for committee positions like any other senator."<sup>1</sup> A political scientist put it plainly: not caucusing with either party is "not something we've seen in modern times."<sup>13</sup></p>
+  </div>
+
+  <div class="swing">
+    <p><b>"But couldn't he be the swing vote?"</b> A swing vote is powerful when it can be traded. Jeffords traded his caucus membership for a Democratic majority. Bodnar has promised in advance never to make that trade, and his biggest backer requires the promise. That's leverage given away before he's sworn in.</p>
+  </div>
+
+  <div class="bottom">
+    <h2>The bottom line</h2>
+    <p>Stopping Trump's agenda takes more than a "no" at the finish line. It takes a majority, a committee seat, and a gavel.</p>
+    <p class="ask">Ask Seth Bodnar: if your vote decides the Senate majority, will you give it to the party that will hold Trump accountable? So far, his pledge says no.</p>
+  </div>
+
+  <p class="srcnote">Numbered sources are listed on the next page.</p>
+  <div class="disclaimer">[PAID FOR BY ____________ — fill in the required disclaimer before distribution]</div>
+</section>
+
+<!-- ===================== PAGE 3: SOURCES ===================== -->
+<section class="page break">
+  <h2>Sources and notes</h2>
+  <div class="sources">
+    <ol>
+      <li>Daily Montanan, "Bodnar announces independent campaign for U.S. Senate," Mar. 4, 2026; Hungry Horse News, "Bodnar stumps in Kalispell, commits to independence," Jul. 22, 2026; Newsweek, "Inside Seth Bodnar's Montana Senate Race…," 2026.</li>
+      <li>Montana Public Radio, "Interest group money rolls in to Montana's congressional races," Sep. 18, 2026; CNN, "Joe Manchin reenters the political orbit with a new independent experiment," Jul. 24, 2026.</li>
+      <li>KTVQ/KXLF, "Montana U.S. Senate hopeful Seth Bodnar talks tariffs, war and running without a party," 2026.</li>
+      <li>Daily Montanan, "Debate between US Senate candidates tips scales for audience members," Sep. 22, 2026.</li>
+      <li>U.S. Senate Historical Office, "Tom Daschle" (senate.gov); PBS NewsHour, Jeffords coverage, May 23–24, 2001.</li>
+      <li>Post Independent, citing GovTrack.us statistics for the 118th Congress (2023–24).</li>
+      <li>Senate Veterans' Affairs Committee press releases, June and August 2022 (veterans.senate.gov).</li>
+      <li>Defense News, "Sen. Jon Tester takes defense appropriations gavel," Feb. 12, 2021.</li>
+      <li>Office of Rep. Ryan Zinke press releases, Jan. 22 and Feb. 3, 2026 (zinke.house.gov).</li>
+      <li>Office of Sen. Tim Sheehy, Apr. 8, 2025 (sheehy.senate.gov); Bozeman Daily Chronicle, 2025.</li>
+      <li>U.S. Senate Historical Office, "Independent Fights" and "Wayne Morse" (senate.gov).</li>
+      <li>U.S. Constitution, Art. I, §2, cl. 5 and §3, cl. 6.</li>
+      <li>MSU Exponent, "Bodnar's unconventional Senate campaign takes shape, questions linger about his chances," 2026.</li>
+    </ol>
+  </div>
+  <h3 style="font-family:Archivo,sans-serif;font-size:14px;margin:18px 0 6px">Notes on wording</h3>
+  <ul class="notes">
+    <li><b>"Impeach" vs. "convict."</b> The House impeaches; the Senate tries the case. A senator's role is the vote to convict, which takes two-thirds of senators present.</li>
+    <li><b>Committee seats.</b> No Senate rule bars a non-caucusing senator from committees. But seats are allocated through the two party conferences. The only modern attempt (Morse, 1953) ended with him losing his major committees.</li>
+    <li><b>Bill statistics.</b> Counts vary by source and by when they're measured. We use the full-Congress figure for 2023–24.</li>
+    <li><b>Impeachment position.</b> "No public commitment found" reflects a review of news coverage and candidate statements through Oct. 11, 2026. If Bodnar commits publicly, this row should be updated.</li>
+  </ul>
+  <div class="disclaimer">[PAID FOR BY ____________ — fill in the required disclaimer before distribution]</div>
+</section>
+
+</body>
+</html>
