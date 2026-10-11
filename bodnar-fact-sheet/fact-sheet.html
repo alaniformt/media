@@ -147,8 +147,9 @@
   @media print {
     :root { --ink:#14213d; --ink-soft:#3b4660; --paper:#fbf8f2; --card:#fff; --rule:#d9d2c3; --accent:#b8452f; --sky:#2f5d8a; --yes:#2e7d4f; --no:#b3261e; --maybe:#b7791f; --band:#14213d; --band-ink:#fbf8f2; }
     body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .page { padding: 0.4in 0.5in; zoom: .86; }
-    .page.p2 { zoom: .7; padding: 0.42in 0.56in; }
+    /* zoom shrinks type to fit a sheet; widen the box by the same factor so it still fills the paper */
+    .page { --z: .9; zoom: var(--z); max-width: calc(8.5in / var(--z)); width: calc(8.5in / var(--z)); padding: calc(0.4in / var(--z)) calc(0.5in / var(--z)); }
+    .page.p2 { --z: .8; }
     .bottom .ask { color: #f2b84b; }
     .pledge .label { color: #f2b84b; }
   }
