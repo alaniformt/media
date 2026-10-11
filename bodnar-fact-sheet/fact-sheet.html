@@ -82,6 +82,15 @@
   .card h3 { font-size: 14px; margin: 0 0 6px; text-transform: uppercase; letter-spacing: .08em; }
   .card ul { margin: 0; padding-left: 18px; font-size: 13.5px; }
   .card li { margin: 0 0 4px; }
+  .path { list-style: none; margin: 0 0 14px; padding: 0; background: var(--card); border: 1px solid var(--rule); border-radius: 10px; counter-reset: step; }
+  .path li { display: grid; grid-template-columns: 26px 34px 1fr; align-items: center; gap: 6px; padding: 7px 14px; border-bottom: 1px solid var(--rule); counter-increment: step; }
+  .path li:last-child { border-bottom: 0; }
+  .path li::before { content: counter(step); grid-column: 1; grid-row: 1; font: 800 13px "Archivo", sans-serif; color: var(--ink-soft); }
+  .path .pm { grid-column: 2; grid-row: 1; font-size: 20px; }
+  .path li > div { grid-column: 3; grid-row: 1; }
+  .path b { font-family: "Archivo", sans-serif; font-size: 14px; margin-right: 6px; }
+  .path span:not(.pm) { font-size: 13px; color: var(--ink-soft); }
+  .win.warn { border-left-color: var(--accent); }
   .funnel { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 0 0 6px; align-items: stretch; }
   .step { padding: 14px 12px; color: #fff; text-align: center; }
   .step .num { display: block; font-size: 30px; font-weight: 900; line-height: 1; }
@@ -94,9 +103,9 @@
   .win { background: var(--card); border-left: 4px solid var(--sky); border-radius: 6px; padding: 10px 12px; font-size: 13px; }
   .win b { font-family: "Archivo", sans-serif; display: block; font-size: 13.5px; }
   .win .seat { color: var(--accent); font-family: "Archivo", sans-serif; font-weight: 700; font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em; }
-  .history { border: 2px solid var(--ink); border-radius: 10px; padding: 12px 16px; margin: 0 0 16px; font-size: 13.5px; }
+  .history { border: 2px solid var(--ink); border-radius: 10px; padding: 10px 16px; margin: 0 0 12px; font-size: 13.5px; }
   .history p { margin: 0 0 6px; }
-  .swing { background: var(--card); border: 1px dashed var(--rule); border-radius: 10px; padding: 12px 16px; font-size: 13.5px; margin: 0 0 16px; }
+  .swing { background: var(--card); border: 1px dashed var(--rule); border-radius: 10px; padding: 10px 16px; font-size: 13.5px; margin: 0 0 12px; }
   .swing p { margin: 0; }
   .bottom { background: var(--band); color: var(--band-ink); border-radius: 10px; padding: 16px 18px; }
   .bottom h2 { color: var(--band-ink); font-size: 20px; }
@@ -107,7 +116,9 @@
   .sources ol { margin: 0; padding-left: 16px; }
   .sources li { break-inside: avoid; margin-bottom: 3px; }
   .sources a { color: var(--sky); word-break: break-word; }
-  .srcnote { font-size: 11px; color: var(--ink-soft); margin: 10px 0 0; }
+  .srcnote { font-size: 11px; color: var(--ink-soft); }
+  .footrow { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 8px; }
+  .footrow .disclaimer { margin-top: 0; }
   .notes { font-size: 12.5px; padding-left: 18px; margin: 0; }
   .notes li { margin-bottom: 5px; }
   .disclaimer { margin-top: 10px; border: 1px solid var(--ink); padding: 5px 10px; font-family: "Archivo", sans-serif; font-weight: 700; font-size: 11px; display: inline-block; }
@@ -116,7 +127,16 @@
     .page { padding: 20px 16px; }
     h1 { font-size: 30px; }
     .grid2, .wins { grid-template-columns: 1fr; }
-    .funnel { grid-template-columns: 1fr; }
+    .path { list-style: none; margin: 0 0 14px; padding: 0; background: var(--card); border: 1px solid var(--rule); border-radius: 10px; counter-reset: step; }
+  .path li { display: grid; grid-template-columns: 26px 34px 1fr; align-items: center; gap: 6px; padding: 7px 14px; border-bottom: 1px solid var(--rule); counter-increment: step; }
+  .path li:last-child { border-bottom: 0; }
+  .path li::before { content: counter(step); grid-column: 1; grid-row: 1; font: 800 13px "Archivo", sans-serif; color: var(--ink-soft); }
+  .path .pm { grid-column: 2; grid-row: 1; font-size: 20px; }
+  .path li > div { grid-column: 3; grid-row: 1; }
+  .path b { font-family: "Archivo", sans-serif; font-size: 14px; margin-right: 6px; }
+  .path span:not(.pm) { font-size: 13px; color: var(--ink-soft); }
+  .win.warn { border-left-color: var(--accent); }
+  .funnel { grid-template-columns: 1fr; }
     .s1, .s2, .s3 { border-radius: 0; }
     .s1 { border-radius: 10px 10px 0 0; } .s3 { border-radius: 0 0 10px 10px; }
     .pledge { grid-template-columns: 1fr; gap: 6px; }
@@ -128,7 +148,7 @@
     :root { --ink:#14213d; --ink-soft:#3b4660; --paper:#fbf8f2; --card:#fff; --rule:#d9d2c3; --accent:#b8452f; --sky:#2f5d8a; --yes:#2e7d4f; --no:#b3261e; --maybe:#b7791f; --band:#14213d; --band-ink:#fbf8f2; }
     body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .page { padding: 0.4in 0.5in; zoom: .86; }
-    .page.p2 { zoom: .73; padding: 0.42in 0.56in; }
+    .page.p2 { zoom: .7; padding: 0.42in 0.56in; }
     .bottom .ask { color: #f2b84b; }
     .pledge .label { color: #f2b84b; }
   }
@@ -199,50 +219,36 @@
 <section class="page break p2">
   <h2>Where bills actually live or die</h2>
   <div class="funnel">
-    <div class="step s1"><span class="num">~16,500</span><span class="what">bills introduced in the last full Congress (2023–24)</span></div>
-    <div class="step s2"><span class="num">Most</span><span class="what">never get a committee vote</span></div>
-    <div class="step s3"><span class="num">~1–2%</span><span class="what">became law (about 274)<sup style="color:#fff">6</sup></span></div>
+    <div class="step s1"><span class="num">19,315</span><span class="what">bills and resolutions introduced in the last full Congress (2023–24)</span></div>
+    <div class="step s2"><span class="num">96%</span><span class="what">never got a vote in either chamber</span></div>
+    <div class="step s3"><span class="num">4%</span><span class="what">(685) ever got a vote, the only stage where a senator's "one vote" counts<sup style="color:#fff">6</sup></span></div>
   </div>
-  <p class="note">Committees decide which bills move, write the actual language, and attach the money. A senator with no committee seat only sees the final step: a yes-or-no vote on whatever survived.</p>
+  <h2 style="margin-top:14px">A bill's path, and where Bodnar gets a say</h2>
+  <ol class="path">
+    <li><span class="pm yes">✅</span><div><b>Introduce a bill</b><span>Any senator can. Nearly all go nowhere.</span></div></li>
+    <li><span class="pm no">❌</span><div><b>Get a hearing and a committee vote</b><span>Committee members decide which bills move. Seats come through the party caucuses.</span></div></li>
+    <li><span class="pm no">❌</span><div><b>Write the actual language and add Montana's priorities</b><span>Done in committee "markups." No seat, no amendments, nothing to trade.</span></div></li>
+    <li><span class="pm no">❌</span><div><b>Get scheduled for a floor vote</b><span>The majority leader decides, and the majority caucus picks the leader.</span></div></li>
+    <li><span class="pm no">❌</span><div><b>Negotiate the final deal</b><span>Committee leaders write the final text behind closed doors (see Sheehy below).</span></div></li>
+    <li><span class="pm yes">✅</span><div><b>Vote yes or no</b><span>One vote of 100, on a bill he had no hand in choosing or shaping.</span></div></li>
+  </ol>
 
-  <div class="grid2">
-    <div class="card">
-      <h3 class="yes">What a no-caucus senator can do</h3>
-      <ul>
-        <li>Vote yes/no on what reaches the floor</li>
-        <li>Give speeches and press conferences</li>
-        <li>Place "holds" and object to fast-tracking</li>
-        <li>Force votes on a few special resolutions (e.g., war powers)</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3 class="no">What a no-caucus senator gives up</h3>
-      <ul>
-        <li>Committee seats, where bill language is written</li>
-        <li>A say in who leads and what reaches the floor</li>
-        <li>A role in deciding which party controls the Senate</li>
-        <li>Party-run "hotlines" that clear most bipartisan bills</li>
-        <li>Leverage: a vote promised never to be traded can't be traded for Montana</li>
-      </ul>
-    </div>
-  </div>
-
-  <h2>Montana's wins came from seats at the table <span style="font-weight:500;font-size:13px;color:var(--ink-soft)">(whatever you think of the senator)</span></h2>
+  <h2>Results come from seats at the table <span style="font-weight:500;font-size:13px;color:var(--ink-soft)">(whatever you think of the senator)</span></h2>
   <div class="wins">
     <div class="win"><span class="seat">Chair, Senate Veterans' Affairs</span><b>Tester: PACT Act (2022)</b>The biggest expansion of care for toxic-exposed veterans in decades. It passed the Senate 86–11.<sup>7</sup></div>
     <div class="win"><span class="seat">Chair, Defense Appropriations Subcommittee</span><b>Tester: Malmstrom and the Montana Guard</b>A gavel over nearly all defense spending meant real clout for Great Falls.<sup>8</sup></div>
     <div class="win"><span class="seat">Member, House Appropriations</span><b>Zinke: about $35M for western Montana (FY2026)</b>Including $10M for the Noxon Bridge and $10M for Seeley Lake's wastewater plant.<sup>9</sup></div>
-    <div class="win"><span class="seat">Bipartisan partner and party UC process</span><b>Sheehy: aerial firefighting law (2025)</b>He teamed up with a Democrat and cleared the Senate by unanimous consent.<sup>10</sup></div>
+    <div class="win warn"><span class="seat">Member, Senate Armed Services</span><b>Sheehy: even a seat isn't always enough</b>His bipartisan military right-to-repair language with Sen. Warren was written in committee and passed both chambers. Then committee leaders stripped it from the final bill. Without a seat, you don't even get that far.<sup>10</sup></div>
   </div>
 
   <div class="history">
     <h2 style="margin-bottom:4px">The last time a senator tried this</h2>
-    <p>In 1953, Oregon's Wayne Morse left the Republican Party and refused to join either side. He was <b>stripped of his seats on Armed Services and Labor</b> and left with the D.C. and Public Works committees. When he forced a floor vote to get his seats back, <b>7 senators</b> backed him. He got his choice of committees back only in 1955, <b>after he joined the Democrats.</b><sup>11</sup></p>
-    <p style="margin:0">Bodnar says he can "negotiate for committee positions like any other senator."<sup>1</sup> A political scientist put it plainly: not caucusing with either party is "not something we've seen in modern times."<sup>13</sup></p>
+    <p>In 1953, Oregon's Wayne Morse left the Republican Party and refused to join either side. He was <b>stripped of his seats on Armed Services and Labor</b> and left with the D.C. and Public Works committees. When he forced a floor vote to get his seats back, <b>7 senators</b> backed him. He got his pick of committees back in 1955, <b>after joining the Democrats.</b><sup>11</sup></p>
+    <p style="margin:0">Bodnar says he can "negotiate for committee positions like any other senator."<sup>1</sup> No senator has managed it since.<sup>13</sup></p>
   </div>
 
   <div class="swing">
-    <p><b>"But couldn't he be the swing vote?"</b> A swing vote is powerful when it can be traded. Jeffords traded his caucus membership for a Democratic majority. Bodnar has promised in advance never to make that trade, and his biggest backer requires the promise. That's leverage given away before he's sworn in.</p>
+    <p><b>"But couldn't he be the swing vote?"</b> Swing votes are powerful because they can be traded. Jeffords traded his for a Democratic majority. Bodnar has promised never to make that trade, so the leverage is gone before he's sworn in.</p>
   </div>
 
   <div class="bottom">
@@ -251,8 +257,7 @@
     <p class="ask">Ask Seth Bodnar: if your vote decides the Senate majority, will you give it to the party that will hold Trump accountable? So far, his pledge says no.</p>
   </div>
 
-  <p class="srcnote">Numbered sources are listed on the next page.</p>
-  <div class="disclaimer">[PAID FOR BY ____________ — fill in the required disclaimer before distribution]</div>
+  <div class="footrow"><span class="srcnote">Numbered sources are listed on the next page.</span><span class="disclaimer">[PAID FOR BY ____________]</span></div>
 </section>
 
 <!-- ===================== PAGE 3: SOURCES ===================== -->
@@ -265,11 +270,11 @@
       <li>KTVQ/KXLF, "Montana U.S. Senate hopeful Seth Bodnar talks tariffs, war and running without a party," 2026.</li>
       <li>Daily Montanan, "Debate between US Senate candidates tips scales for audience members," Sep. 22, 2026.</li>
       <li>U.S. Senate Historical Office, "Tom Daschle" (senate.gov); PBS NewsHour, Jeffords coverage, May 23–24, 2001.</li>
-      <li>Post Independent, citing GovTrack.us statistics for the 118th Congress (2023–24).</li>
+      <li>GovTrack.us, "Historical Statistics about Legislation in the U.S. Congress," 118th Congress (2023–24). "Got a vote" means a significant vote in either chamber; counts include resolutions.</li>
       <li>Senate Veterans' Affairs Committee press releases, June and August 2022 (veterans.senate.gov).</li>
       <li>Defense News, "Sen. Jon Tester takes defense appropriations gavel," Feb. 12, 2021.</li>
       <li>Office of Rep. Ryan Zinke press releases, Jan. 22 and Feb. 3, 2026 (zinke.house.gov).</li>
-      <li>Office of Sen. Tim Sheehy, Apr. 8, 2025 (sheehy.senate.gov); Bozeman Daily Chronicle, 2025.</li>
+      <li>Sen. Warren press release, "Warren, Sheehy Blast Removal of Right to Repair from NDAA," Dec. 2025 (warren.senate.gov); Federal News Network, "Congress quietly strips right-to-repair provisions from 2026 NDAA," Dec. 2025.</li>
       <li>U.S. Senate Historical Office, "Independent Fights" and "Wayne Morse" (senate.gov).</li>
       <li>U.S. Constitution, Art. I, §2, cl. 5 and §3, cl. 6.</li>
       <li>MSU Exponent, "Bodnar's unconventional Senate campaign takes shape, questions linger about his chances," 2026.</li>
@@ -279,7 +284,7 @@
   <ul class="notes">
     <li><b>"Impeach" vs. "convict."</b> The House impeaches; the Senate tries the case. A senator's role is the vote to convict, which takes two-thirds of senators present.</li>
     <li><b>Committee seats.</b> No Senate rule bars a non-caucusing senator from committees. But seats are allocated through the two party conferences. The only modern attempt (Morse, 1953) ended with him losing his major committees.</li>
-    <li><b>Bill statistics.</b> Counts vary by source and by when they're measured. We use the full-Congress figure for 2023–24.</li>
+    <li><b>Bill statistics.</b> Counts vary by source and definition. We use GovTrack's full-Congress figures for 2023–24, which include resolutions. Roughly 1–2% of bills became law.</li>
     <li><b>Impeachment position.</b> "No public commitment found" reflects a review of news coverage and candidate statements through Oct. 11, 2026. If Bodnar commits publicly, this row should be updated.</li>
   </ul>
   <div class="disclaimer">[PAID FOR BY ____________ — fill in the required disclaimer before distribution]</div>
