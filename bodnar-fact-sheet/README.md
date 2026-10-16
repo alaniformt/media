@@ -7,6 +7,6 @@
 | `social/carousel.html` → `export/slide-1..7.png` | 1080×1350 carousel for Instagram and Facebook. |
 | `social/caption.txt` | Post caption with sources. |
 
-**Before distributing:** fill in the `[PAID FOR BY ____]` disclaimer (it appears in the PDF, on slide 7 and in the caption), and re-check the impeachment row if Bodnar makes a public commitment.
+**Before distributing:** re-check the impeachment row if Bodnar makes a public commitment. No "Paid for by" line is included; add one if the materials are boosted, paid for, or distributed by a political committee.
 
 To re-export after edits, render with Playwright (Chromium). The PDF uses `printBackground` and Letter size.
